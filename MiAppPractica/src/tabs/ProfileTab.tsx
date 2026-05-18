@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { Ionicons } from '@expo/vector-icons';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-import { TabsParamList } from '../navigation/TabsNavigator';
-import CustomButton from '../components/CustomButton';
-import { navigationRef } from '../navigation/NavigationService';
+import { TabsParamList } from '../../navigation/TabsNavigator';
+import CustomButton from '../../components/CustomButton';
+import { navigationRef } from '../../navigation/NavigationService';
 
 type Props = BottomTabScreenProps<TabsParamList, 'Perfil'>;
 
