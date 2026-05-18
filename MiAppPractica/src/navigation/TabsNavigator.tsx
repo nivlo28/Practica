@@ -1,10 +1,11 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeTab from "../tabs/HomeTab";
-import IMCTab from "../tabs/IMCTab";
-import ProfileTab from "../tabs/ProfileTab";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import {RouteProp} from '@react-navigation/native';
-import {RootStackParamList} from './StackNavigator';
+
+import HomeTab from '../../screens/tabs/HomeTab';
+import IMCTab from '../screens/tabs/IMCTab';
+import ProfileTab from '../screens/tabs/ProfileTab';
+import { RootStackParamList } from './StackNavigator';
 
 export type TabsParamList = {
   Inicio: { email: string };
@@ -18,10 +19,11 @@ type Props = {
   route: RouteProp<RootStackParamList, 'MainTabs'>;
 };
 
-export default function TabsNavigator({route}: Props) {
-  const {email} = route.params;
+export default function TabsNavigator({ route }: Props) {
+  const { email } = route.params;
+
   return (
-        <Tab.Navigator
+    <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
           let iconName: keyof typeof Ionicons.glyphMap = 'home';
