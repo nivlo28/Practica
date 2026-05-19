@@ -2,10 +2,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
-import HomeTab from '../../screens/tabs/HomeTab';
-import IMCTab from '../screens/tabs/IMCTab';
-import ProfileTab from '../screens/tabs/ProfileTab';
+import {ProfileTab} from '../screens/tabs/ProfileTab';
 import { RootStackParamList } from './StackNavigator';
+import HomeTab from '../tabs/HomeTab';
 
 export type TabsParamList = {
   Inicio: { email: string };
